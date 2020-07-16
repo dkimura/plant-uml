@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "build": ""
-  },
   "dependencies": {
     "node-plantuml": "^0.9.0"
   },
   "devDependencies": {
     "husky": "4.2.5",
     "lint-staged": "10.2.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

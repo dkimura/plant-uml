@@ -8,7 +8,7 @@ module.exports = {
       filename => {
         const relativePath = path.relative(cwd, filename)
         const baseName = path.basename(relativePath, '.puml')
-        return `puml generate '${relativePath}'  --png --output dist/'${baseName}'.png`
+        return `puml generate '${relativePath}' --png --output dist/'${baseName}'.png && git add .`
       }
     )
   }

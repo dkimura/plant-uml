@@ -7,7 +7,8 @@ module.exports = {
     return filenames.map(
       filename => {
         const relativePath = path.relative(cwd, filename)
-        return `puml generate '${relativePath}'  --png --output dist/'${relativePath}'.png`
+        const baseName = path.basename(relativePath, '.puml')
+        return `puml generate '${relativePath}'  --png --output dist/'${baseName}'.png`
       }
     )
   }
